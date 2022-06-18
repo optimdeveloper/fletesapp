@@ -1,0 +1,73 @@
+<ion-split-pane when="false" contentId="content">
+  <ion-menu menuId="myMenu" contentId="content">
+    <ion-header class="side-menu">
+
+      <ion-toolbar style="--background:#575756 ;">
+        <ion-row style="padding: 40px 0px;">
+          <ion-col style="align-self: center;text-align: center;">
+            <ion-row style="padding-left: 15px;">
+              <img style="width:110px" src="../../assets/logos/logo-b.png"/>
+            </ion-row>
+            <ion-row style="justify-content: center;
+            padding-left: 25px;">
+              <ion-label style="color: white;font-weight: bold;font-size: 19px;">{{user?.register1?.nombre}}&nbsp;{{user?.register1?.apellido}}</ion-label>
+            </ion-row>
+          <ion-row routerLink="/menu/profile" style="justify-content: center;margin-top: 2px;">
+            <ion-label style="color: white;font-size: 14px;">Editar mi perfil</ion-label>
+          </ion-row>
+         
+          </ion-col>
+          <ion-col class="avatar">
+            <ion-avatar>
+              <img src="../../assets/logos/avatar.png"/>
+            </ion-avatar>
+          </ion-col>
+        </ion-row>
+
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+
+        <ion-item  class="list" style="--border-color: transparent;margin-top: 30px;">
+        <img src="../../assets/logos/item1.png"/>
+        <ion-label>Registrar Administrador</ion-label>
+        </ion-item>
+
+        <ion-item class="list" style="--border-color: transparent">
+          <img src="../../assets/logos/item2.png"/>
+          <ion-label>Registrar o seleccionar <br>chofer</ion-label>
+          </ion-item>
+
+          <ion-item class="list" style="--border-color: transparent">
+            <img src="../../assets/logos/item3.png"/>
+            <ion-label>Registrar o seleccionar <br> unidad</ion-label>
+            </ion-item>
+
+            <ion-item class="list" style="--border-color: transparent">
+              <img src="../../assets/logos/item4.png"/>
+              <ion-label>Mis viajes</ion-label>
+              </ion-item>
+
+              <ion-item class="list" style="--border-color: transparent">
+                <img src="../../assets/logos/item5.png"/>
+                <ion-label>Cuenta para pagos</ion-label>
+                </ion-item>
+                <ion-item class="list" style="--border-color: transparent">
+                  <img src="../../assets/logos/item6.png"/>
+                  <ion-label>Contacto</ion-label>
+                  </ion-item>
+                  <ion-item class="list" style="--border-color: transparent">
+                    <img src="../../assets/logos/item7.png"/>
+                    <ion-label>Facturar</ion-label>
+                    </ion-item>
+  
+      </ion-list>
+
+    </ion-content>
+
+  </ion-menu>
+
+  <ion-router-outlet id="content"></ion-router-outlet>
+
+</ion-split-pane>

@@ -1,0 +1,60 @@
+
+
+<ion-content>
+  <div class="top">
+    <ion-row style="margin: 20px 60px 0;justify-content: center;">
+      <ion-label style="color:#ffcb00;font-size: 25px;">
+       Registro
+       </ion-label>
+  </ion-row>
+  <ion-row style="margin: 30px 60px 0;justify-content: left;">
+
+    <p style="color:black;font-size: 14px;">
+      Tómate una fotografía legible
+    </p>
+</ion-row>
+<ion-grid style="display:flex;justify-content: center;margin-top:20px">
+  <ion-row (click)="getPictureMode()">
+        <img *ngIf="signData.user_photo == '' " style="width:120px" src="../../assets/logos/profile.png"/>
+        <img *ngIf="signData.user_photo != '' " style="width:120px" [src]="signData.user_photo"/>
+  </ion-row>
+</ion-grid>
+  
+   
+<ion-row style="margin: 0px 60px 0;justify-content: left;">
+
+  <p style="color:black;font-size: 12px;">
+     Que sea lo mas legible posible (de frente a medio cuerpo, cara descubierta sin gafas, gorra o sombrero).
+  </p>
+
+</ion-row>
+    
+  </div>
+  <div>
+    <ion-row style="padding: 90px 60px 10px">     
+      <ion-button (click)="save()" style="background: gray;"
+        class="btn-transition">
+        Guardar Documentos</ion-button>
+    </ion-row>
+    <ion-row style="padding: 0px 60px 10px">     
+      <ion-button (click)="next()"
+        class="btn-transition">
+        Continuar</ion-button>
+    </ion-row>
+    <ion-row style="justify-content: center;">
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+    
+    </ion-row>
+    <ion-row style="justify-content: center;margin-top: 20px;">
+      <img style="width:160px" src="../../assets/logos/logo-login.png"/>
+    </ion-row>
+  </div>
+  
+  
+</ion-content>

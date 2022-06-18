@@ -1,0 +1,7 @@
+{
+  "name": "bonprix",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

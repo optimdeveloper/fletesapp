@@ -1,0 +1,56 @@
+<ion-content>
+  <ion-toolbar>
+
+    <ion-buttons style="margin-left: 20px;margin-top: 10px;" slot="start">
+
+      <ion-menu-button style="background: white;--padding-start: 0px;  --padding-end: 0px;">
+        <ion-icon style="font-size: 40px;color: #ffcb00;" name="menu"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+   
+  </ion-toolbar>
+  <ion-row style="justify-content: center;">
+    <ion-label style="color:#ffcb00;font-size: 25px;">
+      Tu cotización
+    </ion-label>
+  </ion-row>
+  <ion-item style="margin-top:40px" class="place">
+    <ion-label style="color:black">A</ion-label>
+    <ion-input [(ngModel)]="query" (ionInput)="searchPlace()" placeholder="De punto A">
+    </ion-input>
+  </ion-item>
+  
+  <ion-item class="place">
+    <ion-label style="color:#ffca00">B</ion-label>
+    <ion-input [(ngModel)]="query1" mode="ios" (ionInput)="searchPlace1()" placeholder="A punto B">
+    </ion-input>
+  </ion-item>
+ 
+  <ion-row style="margin: 0px 60px 0;justify-content: left;">
+    <ion-label style="font-size: 16px !important;margin-bottom: 10px;">Tu cotizaciones terminan en:</ion-label>
+  </ion-row>
+  <ion-item  style="--min-height:30px;margin: 5px 60px 20px;--background:#575756;--border-radius: 20px;text-align: center;color: white;">
+    <ion-label style="font-size: 16px !important;margin-bottom: 10px;">01 | 00 | 00 | Horas</ion-label>
+  </ion-item>
+  <div style="margin: 0 20px 20px;height:5px;border-bottom: 1px solid #b8b1b1 ;"></div>
+  <ion-row style="margin: 0px 60px 0;justify-content: left;">
+    <ion-label style="font-size: 16px !important;margin-bottom: 10px;">Tu cotizaciones son de:</ion-label>
+  </ion-row>
+  <ion-row style="padding: 0px 60px 10px">
+    <ion-button (click)="next()" class="btn-transition">
+      $1,2323.00 MXN</ion-button>
+  </ion-row>
+  <ion-row style="padding: 170px 60px 10px">
+    <ion-button (click)="next()" class="btn-transition">
+      SIGUIENTE</ion-button>
+  </ion-row>
+  <ion-row style="justify-content: center;">
+    <ion-icon name="ellipse"></ion-icon>
+    <ion-icon name="ellipse"></ion-icon>
+    <ion-icon name="ellipse"></ion-icon>
+    <ion-icon name="ellipse-outline"></ion-icon>
+  </ion-row>
+  <ion-row style="justify-content: center;margin-top: 20px;">
+    <img style="width:160px" src="../../assets/logos/logo-login.png" />
+  </ion-row>
+</ion-content>

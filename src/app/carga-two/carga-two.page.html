@@ -1,0 +1,62 @@
+
+
+<ion-content>
+  <div class="top">
+    <ion-row style="margin: 20px 60px 0;justify-content: center;">
+      <ion-label style="color:#ffcb00;font-size: 25px;">
+      Datos de Carga
+       </ion-label>
+  </ion-row>
+  
+  <ion-row style="margin: 30px 60px 0;justify-content: left;">
+    <ion-col>
+      <ion-label  style="font-size: 14px;margin-bottom: 10px;">Fecha de descarga:</ion-label>
+      <ion-item mode="ios" style="margin-top: 10px;height: 40px;">
+        <ion-datetime style="font-size: 12px;" [(ngModel)]="signData.fecha_descarga" displayFormat="MM/DD/YYYY"></ion-datetime>
+      </ion-item>
+       
+    </ion-col>
+  </ion-row>
+  <ion-row style="margin: 0px 60px 0;justify-content: left;">
+    <ion-col>
+      
+      <ion-label  style="font-size: 14px;margin-bottom: 10px;">Hora de descarga:</ion-label>
+      <ion-item mode="ios" style="margin-top: 10px;height: 40px;">
+        <ion-datetime style="font-size: 12px;" [(ngModel)]="signData.hora_descarga" displayFormat="HH:mm"></ion-datetime>
+      </ion-item>
+       
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="margin: 0px 60px 0;justify-content: left;">
+    <ion-col>
+      <ion-label style="font-size: 14px;margin-bottom: 10px;">Comentarios:</ion-label>
+       <ion-textarea [(ngModel)]="signData.comentarios" placeholder="" style="margin-top: 10px;"></ion-textarea>
+    </ion-col>
+  </ion-row>
+
+  </div>
+  <div>
+   
+    <ion-row style="padding: 50px 60px 10px">     
+      <ion-button (click)="next()"
+        class="btn-transition">
+        COTIZAR AHORA</ion-button>
+    </ion-row>
+    <ion-row style="justify-content: center;">
+      <ion-icon name="ellipse"></ion-icon>
+      <ion-icon name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse-outline"></ion-icon>
+      <ion-icon  name="ellipse-outline"></ion-icon>
+      
+    
+     
+    </ion-row>
+    <ion-row style="justify-content: center;margin-top: 20px;">
+      <img style="width:160px" src="../../assets/logos/logo-login.png"/>
+    </ion-row>
+  </div>
+  
+  
+</ion-content>
+

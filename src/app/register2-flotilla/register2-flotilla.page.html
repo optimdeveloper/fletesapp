@@ -1,0 +1,49 @@
+
+
+<ion-content>
+  <div class="top">
+    <ion-row style="margin: 20px 60px 0;justify-content: center;">
+      <ion-label style="color:#ffcb00;font-size: 25px;">
+       Registro
+       </ion-label>
+  </ion-row>
+  <ion-row style="margin: 30px 60px 0;justify-content: left;">
+    <ion-col>
+      <ion-label style="color:black;font-size: 14px;">
+        Opinión de cumplimientos:
+       </ion-label>
+       <ion-textarea [(ngModel)]="signData.opinion_cumplimiento" placeholder="Ingresa tu opinión de cumplimiento de obligaciones fiscales positivas." style="margin-top: 10px;"></ion-textarea>
+    </ion-col>
+  </ion-row>
+  
+ 
+  
+
+  </div>
+  <div style="position: absolute;
+  width: 100%;
+  bottom: 0;">
+    <ion-row style="margin: 130px 60px 0;justify-content: left;">
+  
+      <ion-checkbox (ionChange)='onInputTime($event)' [(ngModel)]="terminos" style="--border-color: #f28b1d;"></ion-checkbox>
+      <ion-label style="color:black;font-size: 14px;margin:2px 0 0 10px">
+       Acepto términos y condiciones
+       </ion-label>
+ </ion-row>
+    <ion-row style="padding: 5px 60px 10px">     
+      <ion-button [disabled]="!terminos" [class.opa]="!terminos" (click)="next()"
+        class="btn-transition">
+        Guardar y Enviar</ion-button>
+    </ion-row>
+    <ion-row style="justify-content: center;">
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      
+    </ion-row>
+    <ion-row style="justify-content: center;margin-top: 20px;">
+      <img style="width:160px" src="../../assets/logos/logo-login.png"/>
+    </ion-row>
+  </div>
+  
+  
+</ion-content>

@@ -1,0 +1,44 @@
+
+ion-content{
+  background-image: url('../../assets/img/user.jpg');
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+ --background: none;
+ }
+.bottom{
+  background-image: url('../../assets/img/flotilla.jpg');
+  box-shadow: none;
+  background-size: 100% 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  margin-inline: 0;
+  margin: 0;
+}
+.top{
+
+//  position: absolute;
+//  top: 0;
+  width: 100%;
+}
+.btn-transition {
+  color: white;
+  background: linear-gradient(to left, #f57c00 14%, #ffca00 96%);
+  margin-top: 290px;
+  margin-bottom: 20px;
+  --background: none;
+  border-radius: 25px;
+  font-size: 14px;
+  bottom: 0;
+  width: 100%;
+  --box-shadow: none;
+  text-transform: uppercase;
+}
+.btn-final{
+  --background: transparent;
+  color: white;
+  --border-width: 1px;
+  border: 2px solid;
+  border-radius: 25px;
+  --box-shadow: none;
+  width: 100%;
+}

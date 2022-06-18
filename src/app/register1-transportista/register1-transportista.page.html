@@ -1,0 +1,58 @@
+
+
+<ion-content>
+  <div class="top">
+   
+    <ion-row style="margin: 20px 60px 0;justify-content: center;">
+     
+        <ion-label style="color:#ffcb00;font-size: 25px;">
+          Registro
+         </ion-label>
+    </ion-row>
+    <ion-row style="margin: 30px 60px 0;justify-content: left;">
+      <ion-col>
+        <ion-label style="color:black;font-size: 14px;">
+          Nombres:
+         </ion-label>
+         <ion-input [(ngModel)]="signData.firstName" placeholder="Ingresa aqui tu nombre" style="margin-top: 10px;"></ion-input>
+      </ion-col>
+  </ion-row>
+  <ion-row style="margin: 10px 60px 0;justify-content: left;">
+    <ion-col>
+      <ion-label style="color:black;font-size: 14px;">
+        Apellidos
+       </ion-label>
+       <ion-input [(ngModel)]="signData.lastName" placeholder="Ingresa aqui tus apellidos" style="margin-top: 10px;"></ion-input>
+    </ion-col>
+</ion-row>
+  
+<ion-row style="margin: 10px 60px 0;justify-content: left;">
+  <ion-col>
+    <ion-label style="color:black;font-size: 14px;">
+      Empresa
+     </ion-label>
+     <ion-input  [(ngModel)]="signData.company" placeholder="Ingresa aqui el nombre de tu empresa" style="margin-top: 10px;"></ion-input>
+  </ion-col>
+</ion-row>
+<ion-row style="padding: 10px 60px 10px">     
+  <ion-button (click)="next()"
+    class="btn-transition">
+    Continuar</ion-button>
+</ion-row>
+<ion-row style="justify-content: center;">
+  <ion-icon  name="ellipse"></ion-icon>
+  <ion-icon  name="ellipse-outline"></ion-icon>
+  <ion-icon name="ellipse-outline"></ion-icon>
+  <ion-icon name="ellipse-outline"></ion-icon>
+  <ion-icon name="ellipse-outline"></ion-icon>
+  <ion-icon name="ellipse-outline"></ion-icon>
+  <ion-icon name="ellipse-outline"></ion-icon>
+  <ion-icon name="ellipse-outline"></ion-icon>
+  <ion-icon name="ellipse-outline"></ion-icon>
+</ion-row>
+  </div>
+ 
+  <ion-card class="bottom"> </ion-card>
+   
+  
+</ion-content>

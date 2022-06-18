@@ -1,0 +1,30 @@
+.bottom{
+    background:linear-gradient(90deg, #ffcb00 25%, #ffd000 30%, #ffa600 75%,#f28b1d 100%) !important;
+    //height: 400px;
+    border-radius: 45px 45px 0 0;
+    margin-top: 90px;
+    width: auto;
+}
+.top{
+  
+  //  position: absolute;
+  //  top: 0;
+    width: 100%;
+}
+.btn-transition {
+    //background: linear-gradient(to right, #f57c00 14%, #ffca00 96%);
+    --background: white;
+    --border-radius: 25px;
+    width: 100%;
+   color:black;
+   font-size: 12px;
+  }
+  .btn-final{
+    --background: transparent;
+    color: white;
+    --border-width: 1px;
+    border: 2px solid;
+    border-radius: 25px;
+    --box-shadow: none;
+    width: 100%;
+  }

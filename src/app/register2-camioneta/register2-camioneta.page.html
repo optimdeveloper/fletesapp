@@ -1,0 +1,84 @@
+
+
+<ion-content>
+  <div class="top">
+    <ion-row style="margin: 20px 60px 0;justify-content: center;">
+        <ion-label style="color:#ffcb00;font-size: 25px;">
+          Registro
+         </ion-label>
+    </ion-row>
+    <ion-row style="margin: 30px 60px 0;justify-content: left;">
+      <ion-col>
+        <ion-label style="color:black;font-size: 14px;">
+          Calle:
+         </ion-label>
+         <ion-input [(ngModel)]="signData.street" style="margin-top: 10px;"></ion-input>
+      </ion-col>
+  </ion-row>
+  <ion-row style="margin: 10px 60px 0;justify-content: left;">
+    <ion-col>
+      <ion-label style="color:black;font-size: 14px;">
+        Número exterior:
+       </ion-label>
+       <ion-input type="tel" [(ngModel)]="signData.numberOut" style="margin-top: 10px;"></ion-input>
+    </ion-col>
+</ion-row>
+  
+<ion-row style="margin: 10px 60px 0;justify-content: left;">
+  <ion-col>
+    <ion-label style="color:black;font-size: 14px;">
+      Número interior:
+     </ion-label>
+     <ion-input type="tel" [(ngModel)]="signData.numberIn" style="margin-top: 10px;"></ion-input>
+  </ion-col>
+</ion-row>
+ 
+<ion-row style="margin: 10px 60px 0;justify-content: left;">
+  <ion-col>
+    <ion-label style="color:black;font-size: 14px;">
+      Colonia:
+     </ion-label>
+     <ion-input [(ngModel)]="signData.cologne" style="margin-top: 10px;"></ion-input>
+  </ion-col>
+</ion-row>
+ 
+<ion-row style="margin: 10px 60px 0;justify-content: left;">
+  <ion-col>
+    <ion-label style="color:black;font-size: 14px;">
+      Municipio o Delegación:
+     </ion-label>
+     <ion-input [(ngModel)]="signData.town" style="margin-top: 10px;"></ion-input>
+  </ion-col>
+</ion-row>
+ 
+<ion-row style="margin: 10px 60px 0;justify-content: left;">
+  <ion-col>
+    <ion-label style="color:black;font-size: 14px;">
+      Código postal:
+     </ion-label>
+     <ion-input type="tel" [(ngModel)]="signData.postalCode" style="margin-top: 10px;"></ion-input>
+  </ion-col>
+</ion-row>
+<ion-row style="padding: 10px 60px 10px">     
+  <ion-button (click)="next()"
+    class="btn-transition">
+    Continuar</ion-button>
+</ion-row>
+<ion-row style="justify-content: center;">
+  <ion-icon  name="ellipse"></ion-icon>
+  <ion-icon  name="ellipse"></ion-icon>
+  <ion-icon name="ellipse-outline"></ion-icon>
+  <ion-icon name="ellipse-outline"></ion-icon>
+  <ion-icon name="ellipse-outline"></ion-icon>
+  <ion-icon name="ellipse-outline"></ion-icon>
+  <ion-icon name="ellipse-outline"></ion-icon>
+ 
+</ion-row>
+  </div>
+ 
+  <ion-row style="justify-content: center;margin-top: 20px;">
+    <img style="width:160px" src="../../assets/logos/logo-login.png"/>
+  </ion-row>
+   
+  
+</ion-content>

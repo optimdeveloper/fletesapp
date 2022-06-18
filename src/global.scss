@@ -1,0 +1,107 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+ion-content.page {
+    
+    --background: red;
+    overflow: scroll;
+}
+.header-md::after {
+    left: 0;
+    bottom: -5px;
+    background-position: left 0 top -2px;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-image:none !important;
+    /* background-repeat: repeat-x; */
+    content: "";
+}
+.header-ios::after {
+    left: 0;
+    bottom: -5px;
+    background-position: left 0 top -2px;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-image:none !important;
+    /* background-repeat: repeat-x; */
+    content: "";
+}
+ion-checkbox{
+    --background-checked: #f28b1d;
+    --border-color-checked: #f28b1d;
+}
+
+ion-header.header {
+    &::after {
+        height: 0 !important;
+    }
+    ion-toolbar {
+        --background: red;
+        --border-width: 0;
+        --border-color: transparent;
+        color: #fff;
+        ion-title {
+            font-size: 18px;
+        }
+        .btn-filter {
+            --color: #fff;
+            font-size: 14px;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.popover-css {
+    .popover-content {
+        max-width: calc( 50vw - 44px );
+    }
+}
+
+.tech-alert-css {
+    .alert-head {
+        padding: 12px 0 8px;
+        .alert-title {
+            margin: 0;
+        }
+    }
+    .alert-message {
+        padding-bottom: 0 !important;
+    }
+    .alert-button {
+        padding: 4px;
+        height: 25px;
+        margin: 0 auto 8px;
+        background: var(--ion-color-success);
+        border-radius: 4px;
+        border: none;
+        color: #fff;
+        width: 50%;
+        max-width: 120px;
+    }
+}

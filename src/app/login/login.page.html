@@ -1,0 +1,98 @@
+<ion-content class="ion-no-padding">
+  <div style="display: none;" id="sign-in-button"></div>
+  <div *ngIf="!success">
+    <ion-row style="margin-top: 100px;justify-content: center;">
+      <img style="height: 40px;" src="../../assets/logos/logo-login.png"/>
+    </ion-row>
+    <ion-row style="margin: 100px 60px 0;justify-content: left;">
+      <ion-label style="color:#ffcb00;font-size: 35px;">
+        Crea
+      </ion-label>
+    </ion-row>
+    <ion-row style="margin: 5px 60px 0;justify-content: left;">
+      <ion-label style="color:#ffcb00;font-size: 35px">
+        tu cuenta
+      </ion-label>
+    </ion-row>
+    <ion-row style="margin: 20px 60px 0;justify-content: left;">
+      <ion-label style="font-size: 14px">
+       Ingresa tu número de Teléfono
+      </ion-label>
+    </ion-row>
+    <div class="main">
+      <ion-card style="margin: 10px 40px 0" no-margin>
+        <ion-card-content>
+            <ion-row>
+                <ion-input clearInput type="tel" placeholder="" [(ngModel)]="this.authData.name"
+                  class="input ion-padding-horizontal" clear-input="true"></ion-input>
+            </ion-row>
+            <ion-row style="margin-top: 10px;">
+             
+                <ion-button (click)="signinWithPhoneNumber($event)"
+                  class="btn-transition">
+                  Continuar</ion-button>
+            </ion-row>
+        
+  
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  <!--success true-->
+  <div *ngIf="success">
+    <ion-row style="margin-top: 100px;justify-content: center;">
+      <img style="height: 40px;" src="../../assets/logos/logo-login.png"/>
+    </ion-row>
+  
+    
+    <ion-row style="margin: 150px 60px 0;justify-content: left;">
+      <ion-label style="font-size: 14px">
+       Te enviamos un código de 6 dígitos
+      </ion-label>
+    </ion-row>
+    <ion-row style="margin: 15px 60px 0;justify-content: left;">
+      <ion-label style="font-size: 14px">
+       a tu número telefónico.
+      </ion-label>
+    </ion-row>
+    <ion-row style="margin: 20px 60px 0;justify-content: left;">
+      <ion-label style="font-size: 14px;color:#ffcb00">
+       !Ingrésalo a continuación!
+      </ion-label>
+    </ion-row>
+    <div class="main">
+      <ion-card style="margin: 10px 40px 0" no-margin>
+        <ion-card-content>
+          
+          
+            <ion-row>
+                <ion-input clearInput type="password" placeholder="" [(ngModel)]="this.code"
+                  class="input ion-padding-horizontal" clear-input="true"></ion-input>
+            </ion-row>
+            <ion-row style="margin-top: 10px;">
+             
+                <ion-button (click)="sendCode()"
+                  class="btn-transition">
+                  Continuar</ion-button>
+            </ion-row>
+        
+  
+        </ion-card-content>
+      </ion-card>
+    </div>
+<div class="bottom">
+  <ion-row style="justify-content: center;">
+    <ion-label style="font-size: 14px;margin-bottom: 10px;">
+     Si tienes problemas con el código 
+    </ion-label>
+  </ion-row>
+  <ion-row style="justify-content: center;">
+    <ion-label style="font-size: 14px">
+     llámanos al 00000000
+    </ion-label>
+  </ion-row>
+</div>
+  
+    
+  </div>
+  

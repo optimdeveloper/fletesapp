@@ -1,0 +1,86 @@
+
+
+<ion-content>
+  <div class="top">
+    <ion-row style="margin: 20px 60px 0;justify-content: center;">
+      <ion-label style="color:#ffcb00;font-size: 25px;">
+       Registro
+       </ion-label>
+  </ion-row>
+ 
+    <ion-row style="margin: 30px 60px 0;justify-content: left;">
+      <ion-col>
+        <ion-label style="color:black;font-size: 14px;">
+          Estado:
+         </ion-label>
+         <ion-input [(ngModel)]="signData.state"  style="margin-top: 10px;"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    
+<ion-row style="margin: 10px 60px 0;justify-content: left;">
+
+    <p style="color:black;font-size: 14px;">
+       Tome una fotografía legible por ambos lados de tu IFE o INE aquí.
+    </p>
+
+</ion-row>
+<ion-grid style="display:flex;justify-content: center;">
+  <ion-row>
+    <ion-col (click)="takePhotoIFEFront()" style="justify-content: center;display: grid;">
+        <img *ngIf="signData.ife_front_photo==''" style="width:100px" src="../../assets/logos/upload.png"/>
+        <img *ngIf="signData.ife_front_photo!=''" style="width:100px" [src]="signData.ife_front_photo"/>
+        <ion-label style="margin-top: 8px;">Anverso:</ion-label>
+    </ion-col>
+    <ion-col (click)="takePhotoIFEBack()">
+        <img *ngIf="signData.ife_back_photo==''" style="width:100px" src="../../assets/logos/upload.png"/>
+        <img *ngIf="signData.ife_back_photo!=''" style="width:100px" [src]="signData.ife_back_photo"/>
+        <ion-label style="margin-top: 8px;">Reverso:</ion-label>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+<ion-row style="margin: 10px 60px 0;justify-content: left;">
+
+  <p style="color:black;font-size: 14px;">
+     Tome una fotografía legible de tu comprobante de domicilio a tu nombre aquí.
+     Puede ser Luz, Agua o Gas (debe estar a tu nombre y no mayor a tres meses)
+  </p>
+
+</ion-row>
+<ion-grid style="justify-content: center;margin-right: 145px;">
+  <ion-row>
+    <ion-col (click)="takePhotoVoucher()"style="justify-content: center;display: grid;">
+        <img *ngIf="signData.voucher_photo==''" style="width:100px" src="../../assets/logos/upload.png"/>
+        <img *ngIf="signData.voucher_photo!=''" style="width:100px" [src]="signData.voucher_photo"/>
+        <ion-label style="margin-top: 8px;">Anverso:</ion-label>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+  </div>
+ 
+  <div>
+    <ion-row style="padding: 50px 60px 10px">     
+      <ion-button (click)="next()"
+        class="btn-transition">
+        Continuar</ion-button>
+    </ion-row>
+    <ion-row style="justify-content: center;">
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+    </ion-row>
+    <ion-row style="justify-content: center;margin-top: 20px;">
+      <img style="width:160px" src="../../assets/logos/logo-login.png"/>
+    </ion-row>
+  </div>
+  
+</ion-content>

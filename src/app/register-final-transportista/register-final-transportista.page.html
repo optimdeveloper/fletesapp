@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar [class.transportista]="params=='hombre_camion'" [class.camioneta]="params=='camioneta'"  style="padding: 50px;">
+    <img style="width:100px" src="../../assets/logos/stick.png"/>
+  </ion-toolbar>
+
+</ion-header>
+
+
+
+<ion-content>
+  <div class="top">
+    <ion-row style="margin: 80px 60px 0;">
+      <ion-label style="color:#ffcb00;font-size: 35px;">
+       Registro <br> exitoso
+       </ion-label>
+  </ion-row>
+
+ 
+  <ion-row style="margin: 20px 60px 0;justify-content: left;">
+    <p style="color:black;font-size: 14px;">
+    Su registro está en proceso de verificación, se le enviará una notificación al correo una vez
+    su registro sea aprobado. El tiempo de espera es de 1 a máximo 3 días.
+    </p>
+</ion-row>
+
+<ion-row style="justify-content: center;margin-top:80px">
+  <img style="width:110px" src="../../assets/logos/location.png"/>
+</ion-row>
+
+
+
+  </div>
+  <div style="display: none;">
+   
+    <ion-row style="padding: 50px 60px 10px">     
+      <ion-button (click)="next()"
+        class="btn-transition">
+        Guardar y Continuar</ion-button>
+    </ion-row>
+   
+    
+  </div>
+  
+  
+</ion-content>

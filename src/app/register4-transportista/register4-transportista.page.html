@@ -1,0 +1,81 @@
+
+
+<ion-content>
+  <div class="top">
+    <ion-row style="margin: 20px 60px 0;justify-content: center;">
+      <ion-label style="color:#ffcb00;font-size: 25px;">
+       Registro
+       </ion-label>
+  </ion-row>
+ 
+    <ion-row style="margin: 30px 60px 0;justify-content: left;">
+      <ion-col>
+        <ion-label style="color:black;font-size: 14px;">
+          Datos de la licencia de conducir:
+         </ion-label>
+         <ion-input type="tel" [(ngModel)]="signData.license" placeholder="No. de licencia" style="margin-top: 10px;"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin: 30px 60px 0;justify-content: left;">
+      <ion-col>
+        <ion-label style="color:black;font-size: 14px;">
+          No. de preventiva:
+         </ion-label>
+         <ion-input type="tel" [(ngModel)]="signData.preventive" placeholder="No. de preventiva" style="margin-top: 10px;"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin: 0px 60px 0;justify-content: left;">
+
+      <p style="color:black;font-size: 12px;">
+         (Este viene al reverso o en la parte superior de tu licencia de conducir)
+      </p>
+  
+  </ion-row>
+    
+<ion-row style="margin: 10px 60px 0;justify-content: left;">
+
+    <p style="color:black;font-size: 14px;">
+       Tome una fotografía legible por ambos lados de tu licencia de conducir.
+    </p>
+
+</ion-row>
+<ion-grid style="display:flex;justify-content: center;">
+  <ion-row>
+    <ion-col (click)="takePhotoLicenseFront()" style="justify-content: center;;display: grid;">
+        <img *ngIf="signData.license_front_photo ==''" style="width:100px" src="../../assets/logos/upload.png"/>
+        <img *ngIf="signData.license_front_photo !=''" style="width:100px" [src]="signData.license_front_photo"/>
+        <ion-label style="margin-top: 8px;">Anverso:</ion-label>
+    </ion-col>
+    <ion-col (click)="takePhotoLicenseBack()">
+        <img *ngIf="signData.license_back_photo =='' " style="width:100px" src="../../assets/logos/upload.png"/>
+        <img *ngIf="signData.license_back_photo !=''" style="width:100px" [src]="signData.license_back_photo"/>
+        <ion-label style="margin-top: 8px;">Reverso:</ion-label>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+ 
+  </div>
+  <div>
+    <ion-row style="padding: 50px 60px 10px">     
+      <ion-button (click)="next()"
+        class="btn-transition">
+        Continuar</ion-button>
+    </ion-row>
+    <ion-row style="justify-content: center;">
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+    </ion-row>
+    <ion-row style="justify-content: center;margin-top: 20px;">
+      <img style="width:160px" src="../../assets/logos/logo-login.png"/>
+    </ion-row>
+  </div>
+  
+  
+</ion-content>

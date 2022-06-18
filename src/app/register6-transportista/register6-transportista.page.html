@@ -1,0 +1,64 @@
+
+
+<ion-content>
+  <div class="top">
+    <ion-row style="margin: 20px 60px 0;justify-content: center;">
+      <ion-label style="color:#ffcb00;font-size: 25px;">
+       Registro
+       </ion-label>
+  </ion-row>
+  <ion-row style="margin: 30px 60px 0;justify-content: left;">
+    <ion-col>
+      <ion-label style="color:black;font-size: 14px;">
+        RFC:
+       </ion-label>
+       <ion-input [(ngModel)]="signData.RFC" placeholder="RFC" style="margin-top: 10px;"></ion-input>
+    </ion-col>
+  </ion-row>
+     
+<ion-row style="margin: 30px 60px 0;justify-content: left;">
+
+  <p style="color:black;font-size: 14px;">
+    Constancia de situación fiscal de mes en curso
+  </p>
+
+</ion-row>
+
+<ion-item style="margin: 0px 60px 0;">
+   <input type="file"  id="file" class="inputfile" (change)="base($event)" style="background:none"/>
+   <label for="file">{{name_pdf}}</label>
+     <img style="height: 25px;" src="../../assets/logos/upload-black.png" />
+ 
+</ion-item>
+  <ion-row style="justify-content: center;margin-top: 10px;font-size: 14px;">
+    <ion-label>{{upload}}</ion-label>
+  </ion-row>
+    <!--campo adicional-->
+    
+    <!---->
+  </div>
+  <div>
+   
+    <ion-row style="padding: 100px 60px 10px">     
+      <ion-button [disabled]="upload!='Pdf Cargado !'" [class.dis]="upload!='Pdf Cargado !'" (click)="next()"
+        class="btn-transition">
+        Continuar</ion-button>
+    </ion-row>
+    <ion-row style="justify-content: center;">
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+    </ion-row>
+    <ion-row style="justify-content: center;margin-top: 20px;">
+      <img style="width:160px" src="../../assets/logos/logo-login.png"/>
+    </ion-row>
+  </div>
+  
+  
+</ion-content>

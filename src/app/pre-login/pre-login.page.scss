@@ -1,0 +1,25 @@
+ion-content{
+ background-image: url('../../assets/img/fondo.jpg');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+--background: none;
+}
+ion-label{
+    color:white;
+    text-align: justify;
+  font-size: 14px;
+}
+.btn1{
+    --background: linear-gradient(90deg, #ffcb00 25%, #ffd000 30%, #ffa600 75%,#f28b1d 100%) !important;
+    --border-radius: 25px;
+    width: 100%;
+    margin: 20px 70px;
+}
+.btn2{
+    --background: transparent;
+    width: 100%;
+    margin: 0px 70px 40px;
+    border: 2px solid white;
+    --box-shadow: none;
+    border-radius: 25px;
+}

@@ -1,0 +1,45 @@
+
+
+<ion-content>
+  <ion-toolbar>
+  
+    <ion-buttons style="margin-left: 20px;margin-top: 10px;" slot="start">
+     
+      <ion-menu-button style="background: white;--padding-start: 0px;  --padding-end: 0px;">
+        <ion-icon style="font-size: 40px;color: #ffcb00;" name="menu"></ion-icon>
+      </ion-menu-button>
+  </ion-buttons>
+ 
+ 
+</ion-toolbar>
+  <ion-row style="justify-content: center;" class="r-b">
+    <img style="width:160px" src="../../assets/logos/logo-login.png"/>
+  </ion-row>
+ <ion-item>
+<ion-label style="color:black">A</ion-label>
+<ion-input [(ngModel)]="query" (ionInput)="searchPlace()" placeholder="Ingresa punto de partida">
+
+</ion-input>
+ </ion-item>
+ <ion-list class="list-one">
+  <ion-item style="padding: 2px;font-size: 12px;" *ngFor="let place of places" (click)="selectPlace(place)">{{place.description}}</ion-item>
+ </ion-list>
+ <ion-item>
+  <ion-label style="color:#ffca00">B</ion-label>
+  <ion-input [(ngModel)]="query1" mode="ios" (ionInput)="searchPlace1()" placeholder="Donde vas a descargar?">
+  
+  </ion-input>
+   </ion-item>
+   <ion-list class="list-two">
+    <ion-item style="padding: 2px;font-size: 12px;" *ngFor="let place of places1" (click)="selectPlace1(place)">{{place.description}}</ion-item>
+   </ion-list>
+   <ion-item>
+    <ion-icon style="color:#ffca00 ;font-size: 25px" name="star"></ion-icon>
+    <ion-label style="font-size:20px !important;color:black">Ubicaciones guardadas</ion-label>
+    <ion-icon (click)="gotoCarga()" mode="ios" style="color:black ;font-size: 25px" name="arrow-forward"></ion-icon>
+     </ion-item>
+  <div #map id="map">
+         
+  </div>
+</ion-content>
+

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title mode="ios">Home Admin</ion-title>
+     <ion-buttons slot="start">
+      
+       <ion-menu-button>
+         <ion-icon name="menu"></ion-icon>
+       </ion-menu-button>
+   </ion-buttons>
+   <ion-buttons (click)="logout()" slot="end">
+    <ion-icon name="log-out"></ion-icon>
+</ion-buttons>
+  
+ </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-button (click)="newUser()" >+ Nuevo Usuario</ion-button>
+ <table class="table" style="width: -webkit-fill-available;">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th scope="col"><div class="d-flex justify-content-center">Acciones</div></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  style="text-align: center;" *ngFor="let user of users;let i=index">
+     
+      <td>{{i+1}} </td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.password}}</td>
+      <td><div class="d-flex justify-content-center">
+        <a style="margin-right: 10px;" [routerLink]="['/menu/edit-user',user]"> <ion-icon name="create"></ion-icon></a>
+        <ion-icon  (click)="delete(user)" name="trash"></ion-icon>
+        </div>
+      </td>
+    </tr>
+   
+   
+  </tbody>
+</table>
+</ion-content>
+

@@ -1,0 +1,84 @@
+
+
+<ion-content>
+  <div class="top">
+    <ion-row style="margin: 20px 60px 0;justify-content: center;">
+      <ion-label style="color:#ffcb00;font-size: 25px;">
+       Registro de Unidad
+       </ion-label>
+  </ion-row>
+  <ion-row style="margin: 30px 60px 0;justify-content: left;">
+
+    <p style="color:black;font-size: 14px;">
+      Aqui debes registrar el tipo de camión o camioneta que deseas registrar para brindar
+      servicio dentro de la app así como el seguro vigente de la misma y fotografía legible.
+    </p>
+  
+  </ion-row>
+  <ion-row style="margin: 30px 60px 0;justify-content: left;">
+    <ion-col>
+      <ion-label style="color:black;font-size: 14px;">
+        Unidad a registrar:
+       </ion-label>
+       <ion-item style="margin-top:10px;margin-bottom: 15px;" mode="md">
+        <ion-label  style="font-size: 11px;">Tipo de Unidad</ion-label>
+        <ion-select class="select-instrument" (ngModelChange)="changeTipo($event)" placeholder="Seleccione" [(ngModel)]="signData.unidad">
+          <ion-select-option *ngFor="let item of tipos" [value]="item">{{item.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item mode="md">
+        <ion-label style="font-size: 11px;">Subtipo de Unidad</ion-label>
+        <ion-select class="select-instrument" (ngModelChange)="changeSub($event)" placeholder="Seleccione" [(ngModel)]="signData.sub_unidad">
+          <ion-select-option style="font-size: 9px;"  *ngFor="let sub of subs" [value]="sub">{{sub.name}}</ion-select-option>
+         
+        </ion-select>
+      </ion-item>
+     <ion-row style="justify-content: center;">
+      <img *ngIf="image" style="height: 200px;" [src]="image">
+     </ion-row>
+      <!-- <ion-input  [(ngModel)]="signData.unidad" placeholder="Tipo de Unidad" style="margin-top: 10px;"></ion-input>-->
+    </ion-col>
+  </ion-row>
+  <ion-row style="margin: 0px 60px 0;justify-content: left;">
+    <ion-col>
+       <ion-input type="tel" [(ngModel)]="signData.numero_seguro" placeholder="No. del seguro" style="margin-top: 10px;"></ion-input>
+    </ion-col>
+  </ion-row>
+<ion-row style="margin: 20px 60px 0;justify-content: left;">
+ 
+    <p style="color:black;font-size: 14px;">
+      Sube una fotografía legible de la hoja del seguro
+    </p>
+  
+</ion-row>
+<ion-row (click)="getPictureMode()" style="justify-content: center;">
+  <img *ngIf="signData.foto_seguro == '' " style="width:100px" src="../../assets/logos/upload.png"/>
+  <img  *ngIf="signData.foto_seguro != '' " style="width:100px" [src]="signData.foto_seguro"/>
+</ion-row>
+  </div>
+  <div>
+   
+    <ion-row style="padding: 50px 60px 10px">     
+      <ion-button (click)="next()"
+        class="btn-transition">
+        Continuar</ion-button>
+    </ion-row>
+    <ion-row style="justify-content: center;">
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+    </ion-row>
+    <ion-row style="justify-content: center;margin-top: 20px;">
+      <img style="width:160px" src="../../assets/logos/logo-login.png"/>
+    </ion-row>
+  </div>
+  
+  
+</ion-content>

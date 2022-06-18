@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Nuevo Usuario</ion-title>
+    
+      
+      <ion-buttons (click)="back()" slot='start'>
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-buttons>
+ 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="signForm" (ngSubmit)="onSignSubmit()" style="margin-top: 10px; margin-left: 20px; margin-right: 20px;">
+    <div>
+      <div style="border-bottom: 1px solid lightgrey;" class="somePadding">
+        <ion-input type="text" placeholder="Name" autocomplete="off" formControlName="name" [(ngModel)]="signData.name" name=name>
+        </ion-input>
+       
+      </div>
+      <div style="border-bottom: 1px solid lightgrey;" class="somePadding">
+        <ion-input type="email" placeholder="Email" autocomplete="off" formControlName="email" [(ngModel)]="signData.email" name=email>
+        </ion-input>
+       
+      </div>
+      <div style="border-bottom: 1px solid lightgrey;" class="somePadding">
+        <ion-input type="password" placeholder="Password" autocomplete="off" formControlName="password" [(ngModel)]="signData.password" name=password>
+        </ion-input>
+        
+      </div>
+  
+   
+    </div>
+
+
+    <ion-row style="margin-top:20px;">
+      <ion-col size="12">
+      <ion-button mode="ios" type="submit" expand="full" size="medium" shape="round">
+       Registrar Usuario
+       
+      </ion-button>
+    </ion-col>
+    </ion-row>
+    
+  </form>
+</ion-content>

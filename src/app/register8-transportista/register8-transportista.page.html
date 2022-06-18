@@ -1,0 +1,98 @@
+
+
+<ion-content>
+  <div class="top">
+    <ion-row style="margin: 20px 60px 0;justify-content: center;">
+      <ion-label style="color:#ffcb00;font-size: 25px;">
+       Registro de Unidad
+       </ion-label>
+  </ion-row>
+  <ion-row style="margin: 30px 60px 0;justify-content: left;">
+    <ion-col>
+      <ion-label style="color:black;font-size: 14px;">
+        Datos del Tracto o Camión:
+       </ion-label>
+       <ion-input [(ngModel)]="signData.tarjeta_circulacion_camion" placeholder="No. de tarjeta de circulación" style="margin-top: 10px;"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row style="margin: 0px 60px 0;justify-content: left;">
+    <ion-col>
+       <ion-input [(ngModel)]="signData.numero_serie" placeholder="NIV. o No. de Serie." style="margin-top: 10px;"></ion-input>
+    </ion-col>
+  </ion-row>
+ 
+  <ion-row style="margin: 20px 60px 0;justify-content: left;">
+    <p style="color:black;font-size: 14px;">
+     Toma una fotografía legible de la tarjeta de circulación del tracto o camión
+    </p>
+</ion-row>
+
+<ion-row (click)="getPictureCirculacion()" style="justify-content: center;">
+  <img *ngIf="signData.foto_circulacion == '' " style="width:100px" src="../../assets/logos/upload.png"/>
+  <img *ngIf="signData.foto_circulacion != '' " style="width:100px" [src]="signData.foto_circulacion"/>
+</ion-row>
+
+<ion-row style="margin: 0px 60px 0;justify-content: left;">
+  <ion-col>
+     <ion-input [(ngModel)]="signData.placa_delantera" placeholder="No. de placa delantera" style="margin-top: 10px;"></ion-input>
+  </ion-col>
+</ion-row>
+<ion-row style="margin: 10px 60px 0;justify-content: left;">
+ 
+    <p style="color:black;font-size: 14px;">
+      Fotografía legible de placa delantera
+    </p>
+  
+</ion-row>
+<ion-row (click)="getPicturePlaca()" style="justify-content: center;">
+  <img *ngIf="signData.foto_placa_delantera == ''" style="width:100px" src="../../assets/logos/upload.png"/>
+  <img *ngIf="signData.foto_placa_delantera != ''" style="width:100px" [src]="signData.foto_placa_delantera"/>
+</ion-row>
+<!--placas-->
+<ng-container *ngIf="params?.register7?.cajas">
+   <div *ngFor="let item of cajas;let i=index">
+    <ion-row style="margin: 0px 60px 0;justify-content: left;">
+      <ion-col>
+         <ion-input [(ngModel)]="item.placa" placeholder="No. de placa caja {{i+1}}" style="margin-top: 10px;"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin: 10px 60px 0;justify-content: left;">
+     
+        <p style="color:black;font-size: 14px;">
+          Fotografía legible de placa de la caja {{i+1}}
+        </p>
+      
+    </ion-row>
+    <ion-row (click)="getPicturePlacaCaja(item)" style="justify-content: center;">
+      <img *ngIf="item.foto_placa == ''" style="width:100px" src="../../assets/logos/upload.png"/>
+      <img *ngIf="item.foto_placa != ''" style="width:100px" [src]="item.foto_placa"/>
+    </ion-row>
+   </div>
+</ng-container>
+<!---->
+  </div>
+  <div>
+   
+    <ion-row style="padding: 50px 60px 10px">     
+      <ion-button (click)="next()"
+        class="btn-transition">
+        Continuar</ion-button>
+    </ion-row>
+    <ion-row style="justify-content: center;">
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon  name="ellipse"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+    </ion-row>
+    <ion-row style="justify-content: center;margin-top: 20px;">
+      <img style="width:160px" src="../../assets/logos/logo-login.png"/>
+    </ion-row>
+  </div>
+  
+  
+</ion-content>

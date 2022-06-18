@@ -1,0 +1,47 @@
+
+
+<ion-content>
+  <div class="top">
+   
+    <ion-row style="margin: 20px 60px 0;justify-content: center;">
+     
+        <ion-label style="color:#ffcb00;font-size: 25px;">
+          Registro
+         </ion-label>
+    </ion-row>
+    <ion-row style="margin: 60px 60px 0;justify-content: left;">
+      <ion-col>
+        <ion-label style="color:black;font-size: 14px;">
+          Nombre de la empresa:
+         </ion-label>
+         <ion-input [(ngModel)]="signData.nombre_empresa" placeholder="Ingresa aqui el nombre de la empresa." style="margin-top: 10px;"></ion-input>
+      </ion-col>
+  </ion-row>
+  <ion-row style="margin: 10px 60px 0;justify-content: left;">
+    <ion-col>
+      <ion-label style="color:black;font-size: 14px;">
+        RFC
+       </ion-label>
+       <ion-input [(ngModel)]="signData.rfc" placeholder="Inscripción en el RFC." style="margin-top: 10px;"></ion-input>
+    </ion-col>
+</ion-row>
+  
+
+<ion-row style="padding: 50px 60px 10px">     
+  <ion-button (click)="next()"
+    class="btn-transition">
+    Continuar</ion-button>
+</ion-row>
+<ion-row style="justify-content: center;">
+  <ion-icon  name="ellipse"></ion-icon>
+  <ion-icon  name="ellipse-outline"></ion-icon>
+ 
+</ion-row>
+  </div>
+ 
+
+   <ion-row class="r-b">
+  <img style="height: 40px;" src="../../assets/logos/logo.png"/>
+</ion-row>
+  
+</ion-content>

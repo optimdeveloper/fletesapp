@@ -1,0 +1,132 @@
+<ion-content>
+  <div class="top">
+    <ion-row style="margin: 20px 60px 0;justify-content: center;">
+      <ion-label style="color:#ffcb00;font-size: 25px;">
+        Datos de Carga
+      </ion-label>
+    </ion-row>
+    <ion-row style="margin: 30px 60px 0;justify-content: left;">
+      <ion-col>
+        <ion-label style="color:black;font-size: 14px;">
+          ¿Qué tipo de unidad necesitas?
+        </ion-label>
+        <ion-item style="margin-top:10px;margin-bottom: 15px;" mode="md">
+          <ion-label style="font-size: 11px;">Tipo de Unidad</ion-label>
+          <ion-select class="select-instrument" (ngModelChange)="changeTipo($event)" placeholder="Seleccione"
+            [(ngModel)]="signData.unidad">
+            <ion-select-option *ngFor="let item of tipos" [value]="item">{{item.name}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item mode="md">
+          <ion-label style="font-size: 11px;">Subtipo de Unidad</ion-label>
+          <ion-select class="select-instrument" (ngModelChange)="changeSub($event)" placeholder="Seleccione"
+            [(ngModel)]="signData.sub_unidad">
+            <ion-select-option style="font-size: 9px;" *ngFor="let sub of subs" [value]="sub">{{sub.name}}
+            </ion-select-option>
+
+          </ion-select>
+        </ion-item>
+        <ion-row style="justify-content: center;">
+          <img *ngIf="image" style="height: 200px;" [src]="image">
+        </ion-row>
+        <!-- <ion-input  [(ngModel)]="signData.unidad" placeholder="Tipo de Unidad" style="margin-top: 10px;"></ion-input>-->
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin: 0px 60px 0;justify-content: left;">
+      <ion-col>
+        <ion-label style="font-size: 14px;margin-bottom: 10px;">Fecha de carga:</ion-label>
+        <ion-item mode="ios" style="margin-top: 10px;height: 40px;">
+          <ion-datetime style="font-size: 12px;" [(ngModel)]="signData.fecha_carga" displayFormat="MM/DD/YYYY">
+          </ion-datetime>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin: 0px 60px 0;justify-content: left;">
+      <ion-col>
+        <ion-label style="font-size: 14px;margin-bottom: 10px;">Hora de carga:</ion-label>
+        <ion-item mode="ios" style="margin-top: 10px;height: 40px;">
+          <ion-datetime style="font-size: 12px;" [(ngModel)]="signData.hora_carga" displayFormat="HH:mm"></ion-datetime>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin: 0px 60px 0;justify-content: left;">
+      <ion-col>
+        <ion-label style="font-size: 14px;margin-bottom: 10px;">Peso en Kg:</ion-label>
+        <ion-input type="tel" [(ngModel)]="signData.peso" placeholder="" style="margin-top: 10px;"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin: 0px 60px 0;justify-content: left;">
+      <ion-col>
+        <ion-label style="font-size: 14px;margin-bottom: 10px;"> ¿Qué vas a cargar?:</ion-label>
+        <ion-input type="tel" [(ngModel)]="signData.carga" placeholder="" style="margin-top: 10px;"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin: 0px 60px 0;justify-content: left;">
+      <ion-col>
+        <ion-label style="font-size: 14px;margin-bottom: 10px;">Se carga en:</ion-label>
+        <ion-select mode="ios" style="border-radius: 20px;
+      background: #e5e5e54a;
+      margin-top: 10px;" [(ngModel)]="signData.metodo_carga" placeholder="Seleccionar">
+          <ion-select-option value="brown">Palets</ion-select-option>
+          <ion-select-option value="blonde">Sacos</ion-select-option>
+          <ion-select-option value="black">Granel</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin: 0px 60px 0;justify-content: left;">
+      <ion-col>
+        <ion-label style="font-size: 14px;margin-bottom: 10px;"> Dimensiones:</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row style="padding: 0 50px;">
+      <ion-col>
+        <ion-input type="tel" [(ngModel)]="signData.dimensiones.width" placeholder="ancho" style="margin-top: 10px;">
+        </ion-input>
+      </ion-col>
+      <ion-col style="align-self: center;text-align: center;" size="1">
+        <ion-label style="position: absolute;
+        top: 0">
+          x
+        </ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-input type="tel" [(ngModel)]="signData.dimensiones.heigth" placeholder="alto" style="margin-top: 10px;">
+        </ion-input>
+      </ion-col>
+      <ion-col style="align-self: center;text-align: center;" size="1">
+        <ion-label style="position: absolute;
+        top: 0">
+          x
+        </ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-input type="tel" [(ngModel)]="signData.dimensiones.deep" placeholder="longitud" style="margin-top: 10px;">
+        </ion-input>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div>
+
+    <ion-row style="padding: 50px 60px 10px">
+      <ion-button (click)="next()" class="btn-transition">
+        Continuar</ion-button>
+    </ion-row>
+    <ion-row style="justify-content: center;">
+      <ion-icon name="ellipse"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+      <ion-icon name="ellipse-outline"></ion-icon>
+
+    </ion-row>
+    <ion-row style="justify-content: center;margin-top: 20px;">
+      <img style="width:160px" src="../../assets/logos/logo-login.png" />
+    </ion-row>
+  </div>
+
+
+</ion-content>
